@@ -63,6 +63,25 @@ for i in range(height):
     print(symbol * width)
 
 
+#Home task 7 Triangle output
+print('Output a triangle of user-entered size.\nThere are NO spaces at the end of lines.\nDO NOT use methods of string type.\n')
+
+#First_option
+variable_1 = 1
+triangle_size = int(input('Please, enter triangle size:'))
+while variable_1 < triangle_size:
+   print(variable_1 * '*')
+   variable_1 += 1
+else:
+    print(triangle_size * '*')
+
+#Second_option
+for t in range(triangle_size):
+    print(t * '*')
+    variable_1 += 1
+else:
+    print(triangle_size * '*')
+
 
 
 
