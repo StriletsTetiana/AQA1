@@ -53,6 +53,14 @@ else:
     print(f'The greatest number is {third_number}')
 
 
+#Home task 6 Rectangle output
+print ('User enters height and width of rectangle (integer numbers), and any symbol.\nOutput a rectangle made up of the entered character of a given size.\nThere are NO spaces at the end of lines.\n')
+height = int(input('Enter height of rectangular:'))
+width = int(input('Enter width of rectangular:'))
+symbol = input('Enter symbol to build rectangular with:')
+
+for i in range(height):
+    print(symbol * width)
 
 
 
