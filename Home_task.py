@@ -85,3 +85,59 @@ else:
 
 
 
+#Home_task_10 Palindrome
+#The user enters a string. Print True if the string is a palindrome, otherwise False.
+# A palindrome is a string that reads the same way from the left and from the right.
+#If there are leading or trailing spaces in the line, they should not be taken into account
+
+#First option
+def isPalindrom(string):
+    string = string.lower()
+    if (string==string[::-1]):
+        return 'True'
+    else:
+        return 'False'
+string=input('Enter data for checking whether the word is palindrome or not:')
+print(isPalindrom(string))
+
+
+#Second option
+palindrom_2= input ("Enter data for checking whether the word is palindrome or not:")
+rev_str= ''
+for i in palindrom_2:
+    rev_str= i + rev_str
+if palindrom_2.lower() == rev_str.lower():
+    print('True')
+else:
+    print('False')
+
+
+# 11. Number of words in sentence
+#The program has a string `sentences`.
+#The string consists of sentences.
+#A 'sentence' is a set of characters delimited by periods(. or ...) or the beginning of a line and a period.
+#Return list with number of words in each sentence.
+#A 'word' is a set of characters between two spaces or the beginning of a line and a space.
+#DO NOT use regular expressions.
+
+text = input('Enter your text for cheking count of words in sentence: ')
+count_of_words = []
+count = 0
+for word in text.split():
+    count = count + 1
+    if word.endswith('.') or word.endswith('...'):
+        count_of_words.append(count)
+        count = 0
+print(count_of_words)
+
+#Home task 12.Search words by condition
+#The program has a line `string`.
+#Print the all words, containing the letter 'o' (in any case (upper/lower)) twice, as a title.
+
+string = "This tool is cool. But that owl is awful. MAGIC TOOLS Ltd."
+
+result = ""
+for word in string.split():
+    if word.lower().find('oo') != -1:
+        result = result + word.title() + " "
+print(result)
